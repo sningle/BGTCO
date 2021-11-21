@@ -1,24 +1,48 @@
-ul {
+ul.nav {
   list-style-type: none;
+  display: flex;
   margin: 0;
   padding: 0;
   background-color: #9CAF88;
   overflow: hidden;
+  align-items:center;
 }
 
-li {
+li.nav {
   display: inline;
   float: left;
+
 }
 
-li a {
+.pic {
   display: block;
-  padding: 10px;
+  padding: 0px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 175px;
   background-color: #9CAF88;
   color: white;
   text-decoration: none;
   font-size: 20px;
   text-align: center;
+  justify-content: left;
+  align-items:left;
+}
+
+.pic:hover {
+  background-color: #9CAF88;
+}
+
+li.nav a {
+  display: flex;
+  padding: 30px;
+  background-color: #9CAF88;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items:center;
 }
 
 li a:hover {
@@ -30,7 +54,7 @@ section {
   display: grid;
   justify-content: center;
   align-content: center;
-  gap: 15px;
+  gap: 30px;
   grid-auto-flow: column;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -83,7 +107,7 @@ section {
         cubic-bezier(0.770, 0.000, 0.175, 1.000);
     width: 400%;
     line-height: 0;
-    height: 300px;
+    height: 400px;
 }
   
 #slides .frame {
@@ -97,19 +121,27 @@ section {
 }
   
 #slides .frame_1 {
-    background: #90C;
+    background-image: url("https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Fwelcome%20banner-01.png?v=1637471516399");
+    background-size: 100% 100%;
 }
   
 #slides .frame_2 {
-    background: #F90;
+    background-image: url("https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Fwelcome%20banner-02.png?v=1637471520571");
+    background-size: 100% 100%;
 }
   
 #slides .frame_3 {
-    background: #606;
+    background-image: url("https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Fwelcome%20banner-03.png?v=1637471523720");
+    background-size: 100% 100%;
 }
   
 #slides .frame_4 {
-    background: #C00;
+    background-image: url("https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Fwelcome%20banner-04.png?v=1637471528043");
+    background-size: 100% 100%;
+}
+
+#slides .frame-content {
+  padding: 20px;
 }
 
 #bullets {
@@ -146,8 +178,26 @@ section {
 
 .card-img {
   border-radius: 5px 5px 0 0;
+  width:100%
 }
 
 .card-container {
   padding: 2px 16px;
+}
+
+.card-a, 
+.card-a:visited,
+.card-a:hover
+.card-a:active
+.card-a:focus
+{ 
+  color: #000;
+  text-decoration: none; 
+}
+
+.bg-red {
+  background-color: #fce6e7;
+  opacity: 0.3;
+  background-image: radial-gradient(#F4848A 1px, #fce6e7 1px);
+  background-size: 20px 20px;
 }

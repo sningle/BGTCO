@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Developer Quiz</title>
+
+    <link rel="stylesheet" href="/identities.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"
+      charset="utf-8"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"
+      charset="utf-8"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"
+      charset="utf-8"
+    ></script>
+  </head>
+
+  <ul>
+    <li>
+      <a class="pic" href="../index.html"
+        ><img
+          src="https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Ffixed_logo.png?v=1637459454277"
+          width="180"
+          height="75"
+      /></a>
+    </li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="./Advice.html">Advice</a></li>
+    <li><a href="./Resources.html">Resources</a></li>
+    <li><a href="./FAQ.html">FAQ</a></li>
+    <li><a href="./Contact.html">Contact</a></li>
+    <li><a href="./Identities.html">Infographic</a></li>
+  </ul>
+
+  <body>
+    <style>
+      h2 {
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: #E5E8E5;
+        margin-left: 250px;
+        margin-right: 250px;
+      }
+      body {
+        font-size: 1.5em;
+        line-height: 1.6;
+        font-weight: 400;
+        font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica,
+          Arial, sans-serif;
+        color: #222;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+        background-color: #f3f6f4;
+        min-height: 100vh;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 15px;
+      }
+
+      p {
+        margin: 10px;
+      }
+      button {
+        /*
+        background: url("https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Fgay_flag.png?v=1637441323786") no-repeat scroll 0 0 transparent;
+        */
+        display: flex;
+        width: 75px;
+        height: 50px;
+        margin-bottom: 10px;
+        color: #000000;
+      }
+
+      .panel {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .panel-gay {
+        display: none;
+        width: 500px; /* 0 width - change this with JavaScript */
+        margin-left: 20px;
+        z-index: 1; /* Stay on top */
+        background-color: #F4848A;
+        transition: 0.5s;
+      }
+
+      .panel-lesbian {
+        display: none;
+        width: 500px; /* 0 width - change this with JavaScript */
+        margin-left: 20px;
+        z-index: 1; /* Stay on top */
+        background-color: #EFBD7C;
+        transition: 0.5s;
+      }
+
+      .panel-bi {
+        display: none;
+        width: 500px; /* 0 width - change this with JavaScript */
+        margin-left: 20px;
+        z-index: 1; /* Stay on top */
+        background-color: #EEDC89;
+        transition: 0.5s;
+      }
+
+      .panel-ace {
+        display: none;
+        width: 500px; /* 0 width - change this with JavaScript */
+        margin-left: 20px;
+        z-index: 1; /* Stay on top */
+        background-color: #CBE2A1;
+        transition: 0.5s;
+      }
+
+      .panel-trans {
+        display: none;
+        width: 500px; /* 0 width - change this with JavaScript */
+        margin-left: 20px;
+        z-index: 1; /* Stay on top */
+        background-color: #99C5E9;
+        transition: 0.5s;
+      }
+
+      .panel-nonbinary {
+        display: none;
+        width: 500px; /* 0 width - change this with JavaScript */
+        margin-left: 20px;
+        z-index: 1; /* Stay on top */
+        background-color: #CBB3D7;
+        transition: 0.5s;
+      }
+
+      .infographic {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-left: 250px;
+        margin-right: 250px;
+        background-color: #E5E8E5;
+        padding-bottom: 50px;
+      }
+    </style>
+
+    <h2>
+      Common LGBT Identities
+    </h2>
+    <div class="infographic">
+      <div class="panel">
+        <button
+          onclick="openGay()"
+          type="button"
+          style="background-image: url('https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Fgay_flag.png?v=1637441323786')"
+        ></button>
+
+        <div id="gay-panel" class="panel-gay">
+          <p>Gay: Someone who is sexually attracted to the same gender as they are The word gay often refers specifically to gay men.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <button
+          onclick="openLesbian()"
+          type="button"
+          style="height: 54px; background-image: url('https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Flesbian_flag.png?v=1637447377262')"
+        ></button>
+
+        <div id="lesbian-panel" class="panel-lesbian">
+          <p>Lesbian: A woman who is attracted to other women. Some nonbinary people also identify as lesbian.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <button
+          onclick="openBi()"
+          type="button"
+          style="height 54 px; background-image: url('https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Fbisexual_flag.png?v=1637447536189')"
+        ></button>
+
+        <div id="bi-panel" class="panel-bi">
+          <p>Bisexual: A person who experiences attracton to two or more genders. People who are attracted to others regardless of gender might choose the term pansexual instead.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <button
+          onclick="openAce()"
+          type="button"
+          style="height: 54px; background-image: url('https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Face_flag.png?v=1637466925190')"
+        ></button>
+
+        <div id="ace-panel" class="panel-ace">
+          <p>Asexual: A person who does not experience sexual attraction. They may still desire a romantic relationship and label themselves heteroromantic, homoromantic, or biromantic. They can also be aromantic.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <button
+          onclick="openTrans()"
+          type="button"
+          style="height: 54px; background-image: url('https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Ftrans_flag.png?v=1637466959435')"
+        ></button>
+
+        <div id="trans-panel" class="panel-trans">
+          <p>Transgender: Transgender people have gender identities that don't match the sex they were assigned at birth. Transgender people may or may not change their bodies or presentation to match their identites.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <button
+          onclick="openNB()"
+          type="button"
+          style="height: 50px; background-image: url('https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Fnonbinary_flag.png?v=1637466968265')"
+        ></button>
+
+        <div id="nonbinary-panel" class="panel-nonbinary">
+          <p>Nonbinary: Nonbinary people can have a gender identity other than male or female, have no gender at all, or be gender fluid. Nonbinary people might choose to use non-gender-specific terms to describe their attraction.</p>
+        </div>
+      </div>
+      <script>
+        function openGay() {
+          document.getElementById("gay-panel").style.display = "inline-block";
+        }
+        function openLesbian() {
+          document.getElementById("lesbian-panel").style.display =
+            "inline-block";
+        }
+        function openBi() {
+          document.getElementById("bi-panel").style.display = "inline-block";
+        }
+        function openAce() {
+          document.getElementById("ace-panel").style.display = "inline-block";
+        }
+        function openTrans() {
+          document.getElementById("trans-panel").style.display = "inline-block";
+        }
+        function openNB() {
+          document.getElementById("nonbinary-panel").style.display = "inline-block";
+        }
+      </script>
+    </div>
+  </body>
+  <footer>
+  © 2021 Opening the Closet Door: A Beginner’s Guide to Coming Out.
+  </footer>
+</html>
