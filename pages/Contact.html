@@ -9,19 +9,34 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
 
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://s.pageclip.co/v1/pageclip.css"
+      media="screen"
+    />
   </head>
 
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="./Advice.html">Advice</a>
-    <a href="./Resources.html">Resources</a>
-    <a href="./FAQ.html">FAQ</a>
-    <a href="./Contact.html">Contact</a>
-    <a href="./boink.html">Infographic</a>
-  </nav>
+  <ul>
+    <li>
+      <a class="pic" href="../index.html"
+        ><img
+          src="https://cdn.glitch.me/e5192835-7e72-4da3-bfa8-5a73a215babd%2Ffixed_logo.png?v=1637459454277"
+          width="180"
+          height="75"
+      /></a>
+    </li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="./Advice.html">Advice</a></li>
+    <li><a href="./Resources.html">Resources</a></li>
+    <li><a href="./FAQ.html">FAQ</a></li>
+    <li><a href="./Contact.html">Contact</a></li>
+    <li><a href="./Identities.html">Infographic</a></li>
+  </ul>
 
   <body>
     <!-- this is the start of content -->
@@ -30,32 +45,67 @@
     </h1>
     <p>
       Do you have any advice you would like to share with other queer people? Or
-      do you have a question about coming out not listed on our site? Let us
-      know!
+      do you have a question about coming out not listed on our site? Wanna
+      leave site feedback and give us suggestions? Contact us!
     </p>
 
-    <form action="https://usebasin.com/f/437ca695d738" method="POST">
-      <label for="reason">Reason for Contact</label><br />
-      <input type="radio" id="advice" name="reason" value="Advice" required>
-      <label for="advice">I want to give advice</label>
-      <br />
-      <input type="radio" id="question" name="reason" value="Question">
-      <label for="question">I want to ask a question</label>
-      
-      <br /><br />
-      <label for="text">Advice / Question</label><br />
-      <textarea id="text" name="text" rows="10" cols="50" required></textarea>
-      
-      <br /><br />
-      <label for="name">Name (Optional)</label><br />
-      <input type="text" id="name" name="name"/>
-      
-      <br /><br />
-      <label for="name">Email (Optional)</label><br />
-      <input type="email" id="email" name="email"/>
-      
-      <br /><br />
-      <input type="submit" value="Submit" />
-    </form>
+    <div class="container">
+      <form
+        action="https://send.pageclip.co/zvmUaGicKuQxUeIWcrat66FvDvtqlzIU"
+        class="pageclip-form"
+        method="post"
+      >
+        <div class="row">
+          <div class="col-25">
+            <label for="reason">Contact Reason</label>
+          </div>
+          <div class="col-75">
+            <select id="reason" name="reason" required>
+              <option value="question">I want to ask a question</option>
+              <option value="advice">I want to give advice</option>
+              <option value="feedback">I want to leave website feedback</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Your message" style="height:100px" required></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="name">Name (Optional)</label><br />
+          </div>
+          <div class="col-75">
+            <input type="text" id="name" name="name" placeholder="Your name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Email (Optional)</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email"
+            />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <input type="submit" value="Submit" class="pageclip-form__submit" />
+        </div>
+      </form>
+    </div>
+
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   </body>
+  <footer>
+  © 2021 Opening the Closet Door: A Beginner’s Guide to Coming Out.
+  </footer>
 </html>
