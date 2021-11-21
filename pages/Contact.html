@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Contact</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="./Advice.html">Advice</a>
+    <a href="./Resources.html">Resources</a>
+    <a href="./FAQ.html">FAQ</a>
+    <a href="./Contact.html">Contact</a>
+    <a href="./boink.html">Infographic</a>
+  </nav>
+
+  <body>
+    <!-- this is the start of content -->
+    <h1>
+      Contact
+    </h1>
+    <p>
+      Do you have any advice you would like to share with other queer people? Or
+      do you have a question about coming out not listed on our site? Let us
+      know!
+    </p>
+
+    <form action="https://usebasin.com/f/437ca695d738" method="POST">
+      <label for="reason">Reason for Contact</label><br />
+      <input type="radio" id="advice" name="reason" value="Advice" required>
+      <label for="advice">I want to give advice</label>
+      <br />
+      <input type="radio" id="question" name="reason" value="Question">
+      <label for="question">I want to ask a question</label>
+      
+      <br /><br />
+      <label for="text">Advice / Question</label><br />
+      <textarea id="text" name="text" rows="10" cols="50" required></textarea>
+      
+      <br /><br />
+      <label for="name">Name (Optional)</label><br />
+      <input type="text" id="name" name="name"/>
+      
+      <br /><br />
+      <label for="name">Email (Optional)</label><br />
+      <input type="email" id="email" name="email"/>
+      
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
